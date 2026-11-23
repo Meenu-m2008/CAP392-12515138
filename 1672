@@ -1,0 +1,17 @@
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int maxWealth = 0;
+
+        for (int[] customerAccounts : accounts) {
+            int currentWealth = 0;
+            for (int balance : customerAccounts) {
+                currentWealth += balance;
+            }
+            if (currentWealth > maxWealth) {
+                maxWealth = currentWealth;
+            }
+        }
+
+        return maxWealth;
+    }
+}
